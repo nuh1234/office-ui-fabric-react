@@ -188,13 +188,16 @@ export class GroupedListSection extends React.Component<IGroupedListSectionProps
       onShouldVirtualize,
       groupedListClassNames,
       groups,
-      compact
+      compact,
+      listProps = {}
     } = this.props;
     const { isSelected } = this.state;
     const renderCount = group && getGroupItemLimit ? getGroupItemLimit(group) : Infinity;
     const isShowAllVisible =
       group && !group.children && !group.isCollapsed && !group.isShowingAll && (group.count > renderCount || group.hasMoreData);
     const hasNestedGroups = group && group.children && group.children.length > 0;
+
+    const { version } = listProps;
 
     const dividerProps: IGroupDividerProps = {
       group,
@@ -231,6 +234,7 @@ export class GroupedListSection extends React.Component<IGroupedListSectionProps
             onRenderCell={this._renderSubGroup}
             getItemCountForPage={this._returnOne}
             onShouldVirtualize={onShouldVirtualize}
+            version={version}
             id={this._id}
           />
         ) : (
@@ -304,13 +308,13 @@ export class GroupedListSection extends React.Component<IGroupedListSectionProps
   }
 
   private _onRenderGroup(renderCount: number): JSX.Element {
-    const { group, items, onRenderCell, listProps, groupNestingDepth, onShouldVirtualize } = this.props;
+    const { group, items, onRenderCell, listProps, groupNestingDepth, onShouldVirtualize, groupProps } = this.props;
     const count = group && !group.isShowingAll ? group.count : items.length;
     const startIndex = group ? group.startIndex : 0;
 
     return (
       <List
-        role="grid"
+        role={groupProps && groupProps.role ? groupProps.role : 'grid'}
         items={items}
         onRenderCell={this._onRenderGroupCell(onRenderCell, groupNestingDepth)}
         ref={this._list}

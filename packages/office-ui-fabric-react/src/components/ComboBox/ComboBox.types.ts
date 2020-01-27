@@ -183,6 +183,11 @@ export interface IComboBoxProps extends ISelectableDroppableTextProps<IComboBox,
   scrollSelectedToTop?: boolean;
 
   /**
+   * Add additional content above the callout list.
+   */
+  onRenderUpperContent?: IRenderFunction<IComboBoxProps>;
+
+  /**
    * Add additional content below the callout list.
    */
   onRenderLowerContent?: IRenderFunction<IComboBoxProps>;
@@ -201,11 +206,6 @@ export interface IComboBoxProps extends ISelectableDroppableTextProps<IComboBox,
    * Custom max width for dropdown
    */
   dropdownMaxWidth?: number;
-
-  /**
-   * Optional mode indicates if multi-choice selections is allowed.  Default to false
-   */
-  multiSelect?: boolean;
 
   /**
    * Sets the 'aria-hidden' attribute on the ComboBox's button element instructing screen readers how to handle the element.
@@ -246,6 +246,26 @@ export interface IComboBoxProps extends ISelectableDroppableTextProps<IComboBox,
    * Optional iconButton props on combo box
    */
   iconButtonProps?: IButtonProps;
+
+  /**
+   * Custom render function for the label text.
+   */
+  onRenderLabel?: IRenderFunction<IOnRenderComboBoxLabelProps>;
+}
+
+/**
+ * {@docCategory ComboBox}
+ */
+export interface IOnRenderComboBoxLabelProps {
+  /**
+   * Props to render the combobox.
+   */
+  props: IComboBoxProps;
+
+  /**
+   * Accessible text for label when combobox is multiselected.
+   */
+  multiselectAccessibleText?: string;
 }
 
 /**
@@ -347,6 +367,11 @@ export interface IComboBoxStyles {
    * Styles for a divider in the options.
    */
   divider: IStyle;
+
+  /**
+   * Styles for hidden screen reader text.
+   */
+  screenReaderText: IStyle;
 }
 
 /**

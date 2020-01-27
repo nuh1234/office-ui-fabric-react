@@ -88,11 +88,12 @@ exports[`Component Examples renders SpinButton.Basic.Example.tsx correctly 1`] =
 
           {
             border-radius: 2px;
-            border: 1px solid #8a8886;
+            border: 1px solid #605e5c;
             box-sizing: border-box;
             display: flex;
             height: 32px;
             min-width: 86px;
+            position: relative;
           }
           &:hover {
             border-color: #323130;
@@ -111,6 +112,7 @@ exports[`Component Examples renders SpinButton.Basic.Example.tsx correctly 1`] =
         className=
             ms-spinButton-input
             {
+              background-color: #ffffff;
               border-radius: 2px 0 0 2px;
               border-style: none;
               box-shadow: none;
@@ -125,7 +127,7 @@ exports[`Component Examples renders SpinButton.Basic.Example.tsx correctly 1`] =
               margin-left: 0px;
               margin-right: 0px;
               margin-top: 0px;
-              min-width: 72px;
+              min-width: 61px;
               outline: 0px;
               overflow: hidden;
               padding-bottom: 0;
@@ -146,6 +148,7 @@ exports[`Component Examples renders SpinButton.Basic.Example.tsx correctly 1`] =
               color: HighlightText;
             }
         data-lpignore={true}
+        disabled={false}
         id="input1"
         onBlur={[Function]}
         onChange={[Function]}
@@ -153,7 +156,6 @@ exports[`Component Examples renders SpinButton.Basic.Example.tsx correctly 1`] =
         onInput={[Function]}
         onKeyDown={[Function]}
         onKeyUp={[Function]}
-        readOnly={false}
         role="spinbutton"
         type="text"
         value="0"
@@ -301,6 +303,11 @@ exports[`Component Examples renders SpinButton.Basic.Example.tsx correctly 1`] =
                   }
               data-icon-name="ChevronUpSmall"
               role="presentation"
+              style={
+                Object {
+                  "fontFamily": "\\"FabricMDL2Icons-2\\"",
+                }
+              }
             >
               
             </i>
@@ -440,6 +447,11 @@ exports[`Component Examples renders SpinButton.Basic.Example.tsx correctly 1`] =
                   }
               data-icon-name="ChevronDownSmall"
               role="presentation"
+              style={
+                Object {
+                  "fontFamily": "\\"FabricMDL2Icons-3\\"",
+                }
+              }
             >
               
             </i>
@@ -506,11 +518,12 @@ exports[`Component Examples renders SpinButton.Basic.Example.tsx correctly 1`] =
 
           {
             border-radius: 2px;
-            border: 1px solid #8a8886;
+            border: 1px solid #605e5c;
             box-sizing: border-box;
             display: flex;
             height: 32px;
             min-width: 86px;
+            position: relative;
           }
           &:hover {
             border-color: #323130;
@@ -529,6 +542,7 @@ exports[`Component Examples renders SpinButton.Basic.Example.tsx correctly 1`] =
         className=
             ms-spinButton-input
             {
+              background-color: #ffffff;
               border-radius: 2px 0 0 2px;
               border-style: none;
               box-shadow: none;
@@ -543,7 +557,7 @@ exports[`Component Examples renders SpinButton.Basic.Example.tsx correctly 1`] =
               margin-left: 0px;
               margin-right: 0px;
               margin-top: 0px;
-              min-width: 72px;
+              min-width: 61px;
               outline: 0px;
               overflow: hidden;
               padding-bottom: 0;
@@ -564,6 +578,7 @@ exports[`Component Examples renders SpinButton.Basic.Example.tsx correctly 1`] =
               color: HighlightText;
             }
         data-lpignore={true}
+        disabled={false}
         id="input9"
         onBlur={[Function]}
         onChange={[Function]}
@@ -571,7 +586,6 @@ exports[`Component Examples renders SpinButton.Basic.Example.tsx correctly 1`] =
         onInput={[Function]}
         onKeyDown={[Function]}
         onKeyUp={[Function]}
-        readOnly={false}
         role="spinbutton"
         type="text"
         value="0"
@@ -719,6 +733,11 @@ exports[`Component Examples renders SpinButton.Basic.Example.tsx correctly 1`] =
                   }
               data-icon-name="ChevronUpSmall"
               role="presentation"
+              style={
+                Object {
+                  "fontFamily": "\\"FabricMDL2Icons-2\\"",
+                }
+              }
             >
               
             </i>
@@ -858,6 +877,11 @@ exports[`Component Examples renders SpinButton.Basic.Example.tsx correctly 1`] =
                   }
               data-icon-name="ChevronDownSmall"
               role="presentation"
+              style={
+                Object {
+                  "fontFamily": "\\"FabricMDL2Icons-3\\"",
+                }
+              }
             >
               
             </i>

@@ -4,7 +4,7 @@ import { memoizeFunction } from '../../../Utilities';
 
 export const getStyles = memoizeFunction(
   (theme: ITheme, customStyles?: IButtonStyles): IButtonStyles => {
-    const { effects, palette } = theme;
+    const { effects, palette, semanticColors } = theme;
 
     const buttonHighContrastFocus = {
       left: -2,
@@ -14,17 +14,12 @@ export const getStyles = memoizeFunction(
       border: 'none'
     };
 
-    const splitButtonDividerDisabled: IStyle = {
+    const splitButtonDividerBaseStyles: IStyle = {
       position: 'absolute',
       width: 1,
       right: 31,
       top: 8,
-      bottom: 8,
-      selectors: {
-        [HighContrastSelector]: {
-          backgroundColor: 'GrayText'
-        }
-      }
+      bottom: 8
     };
 
     const splitButtonStyles: IButtonStyles = {
@@ -68,6 +63,7 @@ export const getStyles = memoizeFunction(
             }
           },
           '.ms-Button.is-disabled': {
+            color: semanticColors.buttonTextDisabled,
             selectors: {
               [HighContrastSelector]: {
                 color: 'GrayText',
@@ -129,7 +125,22 @@ export const getStyles = memoizeFunction(
         marginRight: 0,
         marginBottom: 0
       },
-      splitButtonDividerDisabled: splitButtonDividerDisabled,
+      splitButtonDivider: {
+        ...splitButtonDividerBaseStyles,
+        selectors: {
+          [HighContrastSelector]: {
+            backgroundColor: 'WindowText'
+          }
+        }
+      },
+      splitButtonDividerDisabled: {
+        ...splitButtonDividerBaseStyles,
+        selectors: {
+          [HighContrastSelector]: {
+            backgroundColor: 'GrayText'
+          }
+        }
+      },
       splitButtonMenuButtonDisabled: {
         pointerEvents: 'none',
         border: 'none',

@@ -117,7 +117,7 @@ export interface IPanelProps extends React.HTMLAttributes<PanelBase> {
 
   /**
    * Type of the panel.
-   * @defaultvalue PanelType.smallFixedRight
+   * @defaultvalue PanelType.smallFixedFar
    */
   type?: PanelType;
 
@@ -225,6 +225,12 @@ export interface IPanelProps extends React.HTMLAttributes<PanelBase> {
    * @deprecated Serves no function.
    */
   componentId?: string;
+
+  /**
+   * Allow body scroll on content and overlay on touch devices. Changing after mounting has no effect.
+   * @defaultvalue false
+   */
+  allowTouchBodyScroll?: boolean;
 }
 
 /**
@@ -401,6 +407,12 @@ export interface IPanelStyleProps {
    * Optional parameter to provider the class name for header text
    */
   headerClassName?: string;
+
+  /**
+   * Determines where the header is rendered based on whether the user
+   * has passed in a custom onRenderNavigation or onRenderNavigationContent render callback
+   */
+  hasCustomNavigation?: boolean;
 }
 
 // TODO -Issue #5689: Comment in once Button is converted to mergeStyles

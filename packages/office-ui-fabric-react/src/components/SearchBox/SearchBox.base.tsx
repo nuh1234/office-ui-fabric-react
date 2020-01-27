@@ -65,8 +65,7 @@ export class SearchBoxBase extends React.Component<ISearchBoxProps, ISearchBoxSt
     }
   }
 
-  // tslint:disable-next-line function-name
-  public UNSAFE_componentWillMount() {
+  public componentWillUnmount() {
     if (this._events) {
       this._events.dispose();
     }
@@ -124,7 +123,7 @@ export class SearchBoxBase extends React.Component<ISearchBoxProps, ISearchBoxSt
           value={value}
           disabled={disabled}
           role="searchbox"
-          aria-label={ariaLabel ? ariaLabel : placeholder}
+          aria-label={ariaLabel}
           ref={this._inputElement}
         />
         {value!.length > 0 && (

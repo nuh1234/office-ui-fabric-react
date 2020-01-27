@@ -1,7 +1,52 @@
 # Change Log - @uifabric/tsx-editor
 
-This log was last generated on Thu, 10 Oct 2019 12:32:08 GMT and should not be manually modified.
+This log was last generated on Thu, 23 Jan 2020 12:32:26 GMT and should not be manually modified.
 
+## 0.11.4
+Thu, 23 Jan 2020 12:32:26 GMT
+
+### Patches
+
+- Fix export to codepen for fabric 7 (#9450) (xgao@microsoft.com)
+## 0.11.3
+Wed, 22 Jan 2020 12:36:43 GMT
+
+### Patches
+
+- Forward supportedPackages from EditorWrapper to TsxEditor (jimkyndemeyer@gmail.com)
+## 0.11.2
+Fri, 17 Jan 2020 02:32:17 GMT
+
+### Patches
+
+- Update tslib minver to first version containing __spreadArrays helper due to changes in how TS emits spreads. (jagore@microsoft.com)
+## 0.11.1
+Thu, 16 Jan 2020 12:28:58 GMT
+
+### Patches
+
+- Upgrade repo to TS3.7. (jagore@microsoft.com)
+## 0.11.0
+Thu, 09 Jan 2020 12:34:52 GMT
+
+### Minor changes
+
+- Switch dynamic imports in tsx-editor to require.ensure (elcraig@microsoft.com)
+### Patches
+
+- Update Monaco; fix worker loader in Chrome; fix bundling (elcraig@microsoft.com)
+## 0.10.4
+Wed, 08 Jan 2020 17:02:57 GMT
+
+### Patches
+
+- bumping load-themed-styles to take advantage of es6 version of it (kchau@microsoft.com)
+## 0.10.3
+Mon, 28 Oct 2019 22:25:45 GMT
+
+### Patches
+
+- Fix some minor bugs (elcraig@microsoft.com)
 ## 0.10.2
 Thu, 10 Oct 2019 12:32:08 GMT
 
